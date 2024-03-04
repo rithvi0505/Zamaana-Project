@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home Customer</title>
+<link rel="stylesheet" href="/CSS/index.css">
+</head>
+<body>
+<div class="container">
+
+	<div class="navbar">
+			<div class="navlogo">
+					<div class="logo"></div>
+			</div>
+			<div class="navmenuHome">
+				<div class="navUpper">
+					<div class="searchbar"><form action="/searchSong" method="post">
+						<input type="text" name="songName" placeholder="Search a song" id="searchfield"> <input type="submit" value="Search" id="searchButton">
+						</form>
+					</div>
+					
+					<div class="menulogin">
+						<form action="/logoutCustomer" method="Get">
+						<input type="submit" value="Log Out" class="menuloginbutton">
+						</form>
+					</div>
+				</div>
+				<div class="navLower">
+										<div class="menus"><a href="/map-aboutHome"id="menuLinks">About</a></div>
+										<div class="menus"><a href="/homeCustomer" id="menuLinks">Home</a><br><br></div>
+										<div class="menus"><a href="/viewMyPlaylistCustomer" id="menuLinks">My playlists</a><br><br></div>
+										<div class="menus"><a href="/viewPlaylistCustomer" id="menuLinks">All playlists</a><br><br></div>
+										<div class="menus"><a href="/createPlaylistCustomer" id="menuLinks">Create Playlist</a><br><br></div>
+				</div>
+		 </div>
+	</div>
+
+	
+	<div class="content">
+		
+		<div class="songsHomePad">
+				<div id="songHeadBand">
+					<div class="songHeadRow">
+								<div class="tableheadsTrack">Track</div>
+								<div class="tableheads">Title</div>
+								<div class="tableheads">Artist</div>
+								<div class="tableheads">Genre</div>
+					</div>
+				</div>		
+				<div class="songsHome">
+					<div class="songBodyRow" th:each="song:${songslist}">
+						<div class="track"> <audio controls id="audioControl">
+											<source th:src="${song.songLink}" type="audio/mpeg" >
+											</audio>
+						</div>
+						<div class="songBody" th:text="${song.songName}"></div>
+						<div class="songBody" th:text="${song.songArtist}"></div>
+						<div class="songBody" th:text="${song.songGenre}"></div>
+					</div>
+				
+			</div>
+		</div>		
+	</div>
+
+</div>
+
+</body>
+</html>

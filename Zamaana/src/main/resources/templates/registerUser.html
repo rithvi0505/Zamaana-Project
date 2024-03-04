@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register User</title>
+<link rel="stylesheet" href="/CSS/index.css">
+</head>
+<body>
+
+<div class="container">
+
+	<div class="navbar">
+			<div class="navlogo">
+					<div class="logo"></div>
+			</div>
+			<div class="navmenu">
+		
+					<div class="menus">About</div>
+					<div class="menulogin"> <a href="/map-login"> <button class="menuloginbutton">Log In</button> </a> </div>
+			</div>
+	</div>
+	
+	<div class="content">
+		
+			<div class="regCard">
+				<div class="regCardUpper">Register Yourself
+				</div>
+				<div class="errorStrip"></div>
+				<div class="regCardLower">
+							<form action="/registerUser" method="post">
+								<input type="text" placeholder="Enter your username" name="username" id="textfields" required><br><br>
+								
+								<input type="email" placeholder="Enter your email id" name="email" id="textfields" required><br><br>
+								
+								<input type="password" placeholder="Enter a password" name="password" id="textfields" required><br><br>
+								
+								<div id="dropdiv">
+								<label>Gender: </label>
+									<select name="gender" id="drop1">
+										<option value="Male" >Male</option>
+										<option value="Female" >Female</option>
+										<option value="Retard" >Retard</option>
+									</select>
+									
+								<label>Role: </label>
+									<select name="role" id="drop2">
+										<option value="customer" >Customer</option>
+										<option value="publisher" disabled>Publisher</option>
+									</select>	
+									
+								</div>	
+								<br><input type="submit" value="Register" id="registerSubmit">	
+							</form>
+				</div>			
+			</div>
+	</div>
+
+</div>
+
+
+
+</body>
+</html>

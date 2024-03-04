@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Email Already Exists</h1>
+<form action="/registerUser" method="post">
+	<input type="text" placeholder="Enter your username" name="username" required><br><br>
+	
+	<input type="email" placeholder="Enter your email id" name="email" required><br><br>
+	
+	<input type="password" placeholder="Enter a password" name="password" required><br><br>
+	
+	<label>Gender: </label>
+		<select name="gender">
+			<option value="Male" >Male</option>
+			<option value="Female" >Female</option>
+			<option value="Retard" >Retard</option>
+		</select>
+		
+	<label>Role: </label>
+		<select name="role">
+			<option value="customer" >Customer</option>
+			<option value="publisher" disabled>Publisher</option>
+		</select>	
+	<br><br><input type="submit" value="register">	
+</form>
+</body>
+</html>

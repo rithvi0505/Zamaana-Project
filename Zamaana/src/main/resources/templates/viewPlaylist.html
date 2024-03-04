@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>View Playlist</title>
+</head>
+<body>
+
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Songs</th>
+			</tr>	
+		</thead>
+		
+		<tbody>
+			<tr th:each="plist:${playlist}">
+				<td th:text="${plist.playlistName}"></th>
+				<td>
+					<ul>
+						<li th:each="s:${plist.song}">
+							<p th:text="${s.songName}"></p>
+							<audio controls>
+								<source th:src="${s.songLink}" type="audio/mpeg">
+							</audio>
+						</li>
+					</ul>	
+			</tr>	
+		</tbody>
+	</table>
+
+
+</body>
+</html>
